@@ -1,3 +1,13 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+from .models import Pendiente
+from django.template import loader
 
-# Create your views here.
+
+def index(request):
+    todo_list = Pendiente.objects.order_by('-pub_date')[:5]
+    template = loader.get_template('app1/index.html')
+    context = {
+        'todo_list': todo_list,
+    }
+    return HttpResponse(template.render(context, request))
