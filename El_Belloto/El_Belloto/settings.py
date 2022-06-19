@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -122,6 +122,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+#SE INGRESA EL SIGUIENTE CODIGO: 
+#SE CREA CARPETA static EN CARPETA DEL PROYECTO
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'El_Belloto/static/'),) # , PERMITE QUE SE RECONOZCA COMO TUPLA
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
