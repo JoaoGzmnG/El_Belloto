@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app1'
+    'app1.apps.App1Config'
 ]
 
 MIDDLEWARE = [
@@ -74,12 +74,13 @@ WSGI_APPLICATION = 'El_Belloto.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+#MODIFICAR PASSWORD
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'belloto',
         'USER': 'postgres',
-        'PASSWORD': 'COMPLETAR!!',
+        'PASSWORD': '12345',
         'HOST': 'localhost',
         'PORT': '5432',
     }
