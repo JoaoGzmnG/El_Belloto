@@ -2,6 +2,12 @@
 
 {% block content %}
 
-<p>INCLUIR FORMULARO PENDIENTES</p>
+<form action="/form_pendientes" method="POST">
+   
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <button>Agregar</button>
+</form>
 
 {% endblock %}

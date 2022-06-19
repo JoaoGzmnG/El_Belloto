@@ -13,7 +13,7 @@ class Pendiente(models.Model):
     categoria_pendiente = models.CharField(max_length=200)
     descripcion_pendiente = models.CharField(max_length=200)
     tiempo_destinado = models.IntegerField(default=0)
-    pub_date = models.DateTimeField('date published')
+    #pub_date = models.DateTimeField('date published')
 
 
 class Empresa(models.Model):
